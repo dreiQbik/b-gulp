@@ -4,17 +4,17 @@ STYLESHEET: LINKS
 ******************************************************************/
 
 a {
-
-    &:link {
-
-    }
+	font-family: $f-link;
 
     &:visited {
 
     }
 
     &:hover,
-    &:focus,
+    &:focus {
+    	
+    }
+
     &:active {
 
     }

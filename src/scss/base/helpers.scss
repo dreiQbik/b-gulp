@@ -2,61 +2,15 @@
 STYLESHEET: HELPERS
 
     > GENERAL
-    > VISIBILITY
 
 ******************************************************************/
 
-.clearfix:before,
-.clearfix:after {
-    content: " ";
-    display: table;
-}
-
-.clearfix:after {
-    clear: both;
-}
-
-.lastitem {
+.h-lastitem {
     margin-bottom: 0;
     margin-right: 0;
 }
 
-.firstitem {
+.h-firstitem {
     margin-top: 0;
     margin-left: 0;
-}
-
-
-
-/******************************************************************
-VISIBILITY
-******************************************************************/
-
-.is-hidden {
-    display: none;
-}
-
-.is-invisible {
-    visibility: hidden;
-}
-
-.is-visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-
-    &.is-focusable:active,
-    &.is-focusable:focus {
-        clip: auto;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        position: static;
-        width: auto;
-    }
 }

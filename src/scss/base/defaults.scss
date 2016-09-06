@@ -8,14 +8,19 @@ html {
     line-height: 1.4;
     box-sizing: border-box;
 
+    @include small {
+    }
+
     @include medium {
         font-size: 1.1em;
+    }
+
+    @include large {
     }
 }
 
 body {
-    font-family: $f_base;
-    color: $c_dark;
+    font-family: $f-base;
 }
 
 *,
@@ -24,13 +29,8 @@ body {
     box-sizing: inherit;
 }
 
-::-moz-selection {
-    background: $c_accent;
-    text-shadow: none;
-}
-
 ::selection {
-    background: $c_accent;
+    background: $c1-accent;
     text-shadow: none;
 }
 
@@ -38,7 +38,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 1px solid $c_medium;
+    border-top: 1px solid $c11-grey;
     margin: 1em 0;
     padding: 0;
 }
