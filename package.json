@@ -1,21 +1,21 @@
 {
   "name": "gulp_boilerplate",
-  "version": "1.0.0",
-  "description": "A boilerplate with gulp and sass",
+  "version": "1.0.1",
+  "description": "A boilerplate with gulp, sass and bootstrap-grid",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joschaholzhaeuer/gulp_boilerplate.git"
+    "url": "git+https://github.com/dreiQbik/b-gulp.git"
   },
   "keywords": [
     "boilerplate",
     "gulp",
     "sass"
   ],
-  "author": "joscha holzhaeuer",
+  "author": "dreiQbik",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^6.3.6",
@@ -33,10 +33,10 @@
     "gulp-sass": "^2.3.1",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-uglify": "^1.5.3",
+    "gulp-util": "^3.0.7",
     "jshint": "^2.8.0",
     "pixrem": "^3.0.0",
     "sass-loader": "^3.2.0",
-    "susy": "^2.2.12",
     "webpack": "^1.13.0",
     "wiredep": "^4.0.0"
   }

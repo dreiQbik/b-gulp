@@ -3,6 +3,7 @@ STYLESHEET: VARIABLES
 
     > COLORS
     > FONTS
+    > GRID_GAPS
     > BREAKPOINTS
 
 ******************************************************************/
@@ -40,13 +41,8 @@ STYLESHEET: VARIABLES
 	==================================== */
 
 	$c1-main:						#2c3e50;
-	$c2-main:						#2c3e50;
-	$c3-main:						#2c3e50;
-	$c4-main:						#2c3e50;
+	
 	$c1-second:						#fff191;
-	$c2-second:						#fff191;
-	$c3-second:						#fff191;
-	$c4-second:						#fff191;
 
 
 	/* ====================================
@@ -79,6 +75,15 @@ STYLESHEET: VARIABLES
 	$f-heading: $opensans;
 	$f-link:    $opensans;
 	$f-text:    $merriweather;
+
+
+
+/******************************************************************
+	GRID_GAPS
+******************************************************************/
+
+$g-vgap: 20px /2;	// gaps between columns
+$g-hgap: 20px;		// gaps between rows
 
 
 
