@@ -103,10 +103,17 @@ gulp.task('htmlmin', function() {
         .pipe(gulp.dest('dist'));
 });
 
+// Copy Images
+gulp.task('image', function() {
+    return gulp
+        .src('src/img/*')
+        .pipe(gulp.dest('dist/img'));
+});
+
 // Compress Images
 gulp.task('imagemin', function() {
     return gulp
-        .src('src/img/*')
+        .src('dist/img/*')
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img'));
 });
@@ -117,12 +124,12 @@ gulp.task('watch', function() {
       proxy: 'localhost/b-gulp/dist/'
     });
     gulp.watch('src/js/*.js', ['lint', 'scripts']).on('change', browserSync.reload);
-    gulp.watch('src/scss/**/*.scss', ['sass', 'css']);
+    gulp.watch('src/scss/**/*.scss', ['sass']);
     gulp.watch('src/*.html', ['html']).on('change', browserSync.reload);
 });
 
 // Default Tasks
-gulp.task('default', ['lint', 'sass', 'scripts', 'html', 'copy-folders', 'watch']);
+gulp.task('default', ['sass', 'lint', 'scripts', 'html', 'image', 'copy-folders', 'watch']);
 
 // Default Tasks
-gulp.task('build', ['lint', 'sass', 'css', 'scripts', 'htmlmin', 'imagemin', 'copy-folders']);
+gulp.task('build', ['sass', 'css', 'lint', 'scripts', 'htmlmin', 'imagemin', 'copy-folders']);
