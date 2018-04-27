@@ -1,0 +1,276 @@
+/******************************************************************
+
+    SETTINGS: FONTS
+
+    USAGE:
+    @include fontstyle(
+        $style: false, $scale: 1,
+        $family: false, $weight: false, $color: false,
+        $fz-xs: false, $lh-xs: false, $mb-xs: false,
+        $fz-sm: false, $lh-sm: false, $mb-sm: false,
+        $fz-md: false, $lh-md: false, $mb-md: false,
+        $fz-lg: false, $lh-lg: false, $mb-lg: false,
+        $fz-xl: false, $lh-xl: false, $mb-xl: false
+    );
+
+    USAGE SHORT:
+    @include fontstyle("01");
+
+******************************************************************/
+
+$font-1: 'Open Sans', Helvetica, Arial, sans-serif;
+$font-2: 'Merriweather', 'Times New Roman', Times, serif;
+
+
+@mixin fontstyle(
+    $style: false, $scale: 1,
+    $family: false, $weight: false, $color: false,
+    $fz-xs: false, $lh-xs: false, $mb-xs: false,
+    $fz-sm: false, $lh-sm: false, $mb-sm: false,
+    $fz-md: false, $lh-md: false, $mb-md: false,
+    $fz-lg: false, $lh-lg: false, $mb-lg: false,
+    $fz-xl: false, $lh-xl: false, $mb-xl: false
+) {
+
+    //settings
+    $family-default: $font-1;
+    $weight-default: 700;
+    $color-default: $c1-main;
+
+    //base
+    $fz-xs-default: 1rem;
+    $lh-xs-default: 1.4em;
+    $mb-xs-default: 0.5em;
+    //small
+    $fz-sm-default: 1rem;
+    $lh-sm-default: 1.4em;
+    $mb-sm-default: 0.5em;
+    //medium
+    $fz-md-default: 1rem;
+    $lh-md-default: 1.4em;
+    $mb-md-default: 0.5em;
+    //large
+    $fz-lg-default: 1rem;
+    $lh-lg-default: 1.4em;
+    $mb-lg-default: 0.5em;
+    //xlarge
+    $fz-xl-default: 1rem;
+    $lh-xl-default: 1.4em;
+    $mb-xl-default: 0.5em;
+
+    @if $style == "01" {
+        //settings
+        $family-default: $font-1;
+        $weight-default: 700;
+        $color-default: $c1-third;
+
+        //base
+        $fz-xs-default: 2rem;
+        $lh-xs-default: 1.2em;
+        $mb-xs-default: 0.5em;
+        //small
+        $fz-sm-default: 2.2rem;
+        $lh-sm-default: 1.2em;
+        $mb-sm-default: 0.5em;
+        //medium
+        $fz-md-default: 2.5rem;
+        $lh-md-default: 1.2em;
+        $mb-md-default: 0.5em;
+        //large
+        $fz-lg-default: 3rem;
+        $lh-lg-default: 1.2em;
+        $mb-lg-default: 0.5em;
+        //xlarge
+        $fz-xl-default: 4rem;
+        $lh-xl-default: 1.2em;
+        $mb-xl-default: 0.5em;
+    }
+
+    @else if $style == "02" {
+        //settings
+        $family-default: $font-1;
+        $weight-default: 700;
+        $color-default: $c1-third;
+
+        //base
+        $fz-xs-default: 1.8rem;
+        $lh-xs-default: 1.2em;
+        $mb-xs-default: 0.5em;
+        //small
+        $fz-sm-default: 2rem;
+        $lh-sm-default: 1.2em;
+        $mb-sm-default: 0.5em;
+        //medium
+        $fz-md-default: 2.2rem;
+        $lh-md-default: 1.2em;
+        $mb-md-default: 0.5em;
+        //large
+        $fz-lg-default: 2.5rem;
+        $lh-lg-default: 1.2em;
+        $mb-lg-default: 0.5em;
+        //xlarge
+        $fz-xl-default: 3rem;
+        $lh-xl-default: 1.2em;
+        $mb-xl-default: 0.5em;
+    }
+
+    @else if $style == "03" {
+        //settings
+        $family-default: $font-2;
+        $weight-default: 400;
+        $color-default: $c1-main;
+
+        //base
+        $fz-xs-default: 1rem;
+        $lh-xs-default: 1.6em;
+        $mb-xs-default: 0.5em;
+        //small
+        $fz-sm-default: 1.15rem;
+        $lh-sm-default: 1.6em;
+        $mb-sm-default: 0.5em;
+        //medium
+        $fz-md-default: 1.15rem;
+        $lh-md-default: 1.6em;
+        $mb-md-default: 0.5em;
+        //large
+        $fz-lg-default: 1.15rem;
+        $lh-lg-default: 1.6em;
+        $mb-lg-default: 0.5em;
+        //xlarge
+        $fz-xl-default: 1.2rem;
+        $lh-xl-default: 1.6em;
+        $mb-xl-default: 0.5em;
+    }
+
+    @else if $style == "04" {
+
+        //settings
+        $family-default: $font-2;
+        $weight-default: 700;
+        $color-default: $c1-third;
+
+        //base
+        $fz-xs-default: 1.3rem;
+        $lh-xs-default: 1.2em;
+        $mb-xs-default: 0.5em;
+        //small
+        $fz-sm-default: 1.5rem;
+        $lh-sm-default: 1.2em;
+        $mb-sm-default: 0.5em;
+        //medium
+        $fz-md-default: 1.8rem;
+        $lh-md-default: 1.2em;
+        $mb-md-default: 0.5em;
+        //large
+        $fz-lg-default: 2rem;
+        $lh-lg-default: 1.2em;
+        $mb-lg-default: 0.5em;
+        //xlarge
+        $fz-xl-default: 2.2rem;
+        $lh-xl-default: 1.2em;
+        $mb-xl-default: 0.5em;
+    }
+
+    @if $family {
+        font-family: $family;
+    } @else {
+        font-family: $family-default;
+    }
+
+    @if $color {
+        color: $color;
+    } @else {
+        color: $color-default;
+    }
+
+    @if $weight {
+        font-weight: $weight;
+    } @else {
+        font-weight: $weight-default;
+    }
+
+    @if $fz-xs {
+        font-size: $fz-xs * $scale;
+    } @else {
+        font-size: $fz-xs-default * $scale;
+    }
+    @if $lh-xs {
+        line-height: $lh-xs;
+    } @else {
+        line-height: $lh-xs-default;
+    }
+    @if $mb-xs{
+        margin-bottom: $mb-xs;
+    } @else {
+        margin-bottom: $mb-xs-default;
+    }
+
+    @include small {
+        @if $fz-sm {
+            font-size: $fz-sm * $scale;
+        } @else {
+            font-size: $fz-sm-default * $scale;
+        }
+        @if $lh-sm {
+            line-height: $lh-sm;
+        } @else {
+            line-height: $lh-sm-default;
+        }
+        @if $mb-sm {
+            margin-bottom: $mb-sm;
+        } @else {
+            margin-bottom: $mb-sm-default;
+        }
+    }
+    @include medium {
+        @if $fz-md {
+            font-size: $fz-md * $scale;
+        } @else {
+            font-size: $fz-md-default * $scale;
+        }
+        @if $lh-md {
+            line-height: $lh-md;
+        } @else {
+            line-height: $lh-md-default;
+        }
+        @if $mb-md {
+            margin-bottom: $mb-md;
+        } @else {
+            margin-bottom: $mb-md-default;
+        }
+    }
+    @include large {
+        @if $fz-lg {
+            font-size: $fz-lg * $scale;
+        } @else {
+            font-size: $fz-lg-default * $scale;
+        }
+        @if $lh-lg {
+            line-height: $lh-lg;
+        } @else {
+            line-height: $lh-lg-default;
+        }
+        @if $mb-lg {
+            margin-bottom: $mb-lg;
+        } @else {
+            margin-bottom: $mb-lg-default;
+        }
+    }
+    @include xlarge {
+        @if $fz-xl {
+            font-size: $fz-xl * $scale;
+        } @else {
+            font-size: $fz-xl-default * $scale;
+        }
+        @if $lh-xl {
+            line-height: $lh-xl;
+        } @else {
+            line-height: $lh-xl-default;
+        }
+        @if $mb-xl {
+            margin-bottom: $mb-xl;
+        } @else {
+            margin-bottom: $mb-xl-default;
+        }
+    }
+}

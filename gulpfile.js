@@ -12,7 +12,6 @@ var rename       = require('gulp-rename');
 var htmlmin      = require('gulp-htmlmin');
 var sourcemaps   = require('gulp-sourcemaps');
 var postcss      = require('gulp-postcss');
-var imagemin     = require('gulp-imagemin');
 var autoprefixer = require('autoprefixer');
 var pixrem       = require('pixrem');
 var cssnano      = require('cssnano');
@@ -23,14 +22,6 @@ function errorHandler(error) {
     gulpUtil.beep();
     return true;
 }
-
-// Copy folders
-gulp.task('copy-folders', function() {
-    return gulp
-        .src(['src/fonts/**/*'], {base: 'src/'})
-        .pipe(gulp.dest('dist/'));
-});
-
 
 // Lint JS-Files
 gulp.task('lint', function() {
@@ -51,6 +42,19 @@ gulp.task('scripts', function() {
         .pipe(uglify())
         .pipe(plumber.stop())
         .pipe(gulp.dest('dist/js'));
+});
+
+// Concatenate & Minify JS Vendor
+gulp.task('vendor-scripts', function() {
+    return gulp
+        .src('src/vendor/js/*.js')
+        .pipe(concat('vendor.js'))
+        .pipe(gulp.dest('dist/js'))
+        .pipe(rename('vendor.min.js'))
+        .pipe(plumber(errorHandler))
+        .pipe(uglify())
+        .pipe(plumber.stop())
+        .pipe(gulp.dest('dist/js/vendor'));
 });
 
 // Compile Sass
@@ -74,7 +78,11 @@ gulp.task('css', function () {
     var processors = [
         pixrem(),
         autoprefixer({
-            browsers: ['last 4 versions', 'android 4', 'opera 12']
+            browsers: [
+                'last 4 versions',
+                'android 4',
+                'opera 12'
+            ]
         }),
         cssnano(),
     ];
@@ -103,33 +111,41 @@ gulp.task('htmlmin', function() {
         .pipe(gulp.dest('dist'));
 });
 
-// Copy Images
-gulp.task('image', function() {
-    return gulp
-        .src('src/img/*')
-        .pipe(gulp.dest('dist/img'));
-});
-
-// Compress Images
-gulp.task('imagemin', function() {
-    return gulp
-        .src('dist/img/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('dist/img'));
-});
-
 // Watch Files For Changes
 gulp.task('watch', function() {
     browserSync.init({
       proxy: 'localhost/b-gulp/dist/'
     });
-    gulp.watch('src/js/*.js', ['lint', 'scripts']).on('change', browserSync.reload);
-    gulp.watch('src/scss/**/*.scss', ['sass']);
-    gulp.watch('src/*.html', ['html']).on('change', browserSync.reload);
+    gulp.watch('src/js/*.js', [
+        'lint',
+        'scripts'
+    ]).on('change', browserSync.reload);
+
+    gulp.watch('src/scss/**/*.scss', [
+        'sass'
+    ]);
+
+    gulp.watch('src/*.html', [
+        'html'
+    ]).on('change', browserSync.reload);
 });
 
 // Default Tasks
-gulp.task('default', ['sass', 'lint', 'scripts', 'html', 'image', 'copy-folders', 'watch']);
+gulp.task('default', [
+    'sass',
+    'lint',
+    'scripts',
+    'html',
+    'vendor-scripts',
+    'watch'
+]);
 
 // Default Tasks
-gulp.task('build', ['sass', 'css', 'lint', 'scripts', 'htmlmin', 'imagemin', 'copy-folders']);
+gulp.task('build', [
+    'sass',
+    'css',
+    'lint',
+    'scripts',
+    'vendor-scripts',
+    'htmlmin'
+]);

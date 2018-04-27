@@ -1,0 +1,42 @@
+
+h1, h2, h3, h4, h5 {
+    font-family: $font-1;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+h1 {
+    @include fontstyle("01");
+}
+h2 {
+    @include fontstyle("02");
+}
+h3, h4, h5 {
+    @include fontstyle("04");
+}
+
+p {
+    @include fontstyle("03");
+    margin-top: 0;
+    margin-bottom: 0.5em;
+}
+
+.heading {
+
+    &-1 {
+        @include fontstyle("01");
+    }
+    &-2 {
+        @include fontstyle("02");
+    }
+    &-3 {
+        @include fontstyle("04");
+    }
+    &-4 {
+        @include fontstyle("04");
+    }
+    &-5 {
+        @include fontstyle("04");
+    }
+}

@@ -1,32 +1,47 @@
-/******************************************************************
-STYLESHEET: STYLE
-
-This is the place where all scss files get imported.
-******************************************************************/
 
 // Includes
-@import "includes/normalize";
-@import "includes/print";
+@import "includes/inc_normalize";
+@import "includes/inc_print";
 
 // Settings
-@import "settings/typography";
-@import "settings/variables";
+@import "settings/set_typography";
+@import "settings/set_variables";
+@import "settings/set_mixins";
+@import "settings/set_fonts";
 
-// Tools
-@import "tools/mixins";
-@import "tools/placeholders";
+// Vendor
+@import "vendor/ven_example";
 
 // Layout
-@import "layout/grid";
-@import "layout/content";
-@import "layout/header";
-@import "layout/footer";
+@import "layout/l_content";
 
 // Base
-@import "base/defaults";
-@import "base/text";
-@import "base/links";
-@import "base/helpers";
+@import "base/_example-grid";
+@import "base/b_grid";
+@import "base/b_container";
+@import "base/b_defaults";
+@import "base/b_text";
+@import "base/b_links";
+@import "base/b_list";
+@import "base/b_helpers";
+
+// Header
+@import "header/h_main";
+
+// Footer
+@import "footer/f_main";
+
+// Navigation
+@import "navigation/n_main";
+
+// Overlays
+@import "overlays/o_example";
+
+// Forms
+@import "forms/fm_base.scss";
+@import "forms/fm_choices.scss";
+@import "forms/fm_upload.scss";
+@import "forms/fm_validation.scss";
 
 // Modules
-@import "modules/module";
+@import "modules/m_module";

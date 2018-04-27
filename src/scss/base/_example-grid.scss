@@ -1,0 +1,48 @@
+// body {
+//     background:  $c12-grey !important;
+// }
+//
+// .container {
+//     background:  $c3-main;
+//
+//     &__inner {
+//         background: $c1-main;
+//     }
+// }
+//
+// .row {
+//     background: #fdfdfd;
+// }
+
+.col-element {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 2em;
+
+
+    &--01 {
+        background: $c1-main;
+        color: $c-white;
+    }
+    &--02 {
+        background: $c2-main;
+        color: $c-white;
+    }
+    &--03 {
+        background: $c1-second;
+        color: $c-black;
+    }
+    &--04 {
+        background: $c1-third;
+        color: $c-white;
+    }
+    &--05 {
+        background: $c1-error;
+        color: $c-white;
+    }
+    &--06 {
+        background: $c1-success;
+        color: $c-white;
+    }
+}

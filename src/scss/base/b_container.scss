@@ -1,0 +1,207 @@
+.main__inner {
+
+    &.pt-small {
+        padding-top: $sp-xs;
+
+        @include small {
+            padding-top: $sp-xs;
+        }
+        @include medium {
+            padding-top: $sp-md;
+        }
+        @include large {
+            padding-top: $sp-lg;
+        }
+        @include xlarge {
+            padding-top: $sp-lg;
+        }
+    }
+
+    &.pt-default {
+        padding-top: $sp-xs;
+
+        @include small {
+            padding-top: $sp-md;
+        }
+        @include medium {
+            padding-top: $sp-lg;
+        }
+        @include large {
+            padding-top: $sp-xl;
+        }
+        @include xlarge {
+            padding-top: $sp-xl;
+        }
+    }
+
+    &.pt-large {
+        padding-top: $sp-md;
+
+        @include small {
+            padding-top: $sp-lg;
+        }
+        @include medium {
+            padding-top: $sp-xl;
+        }
+        @include large {
+            padding-top: $sp-xxl;
+        }
+        @include xlarge {
+            padding-top: $sp-xxl;
+        }
+    }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+
+    &.sp-small {
+        margin-bottom: $sp-xs;
+
+        @include small {
+            margin-bottom: $sp-xs;
+        }
+        @include medium {
+            margin-bottom: $sp-md;
+        }
+        @include large {
+            margin-bottom: $sp-lg;
+        }
+        @include xlarge {
+            margin-bottom: $sp-lg;
+        }
+    }
+
+    &.sp-default {
+        margin-bottom: $sp-xs;
+
+        @include small {
+            margin-bottom: $sp-md;
+        }
+        @include medium {
+            margin-bottom: $sp-lg;
+        }
+        @include large {
+            margin-bottom: $sp-xl;
+        }
+        @include xlarge {
+            margin-bottom: $sp-xl;
+        }
+    }
+
+    &.sp-large {
+        margin-bottom: $sp-md;
+
+        @include small {
+            margin-bottom: $sp-lg;
+        }
+        @include medium {
+            margin-bottom: $sp-xl;
+        }
+        @include large {
+            margin-bottom: $sp-xxl;
+        }
+        @include xlarge {
+            margin-bottom: $sp-xxl;
+        }
+    }
+
+    &--colored {
+        padding-top: $sp-lg;
+        padding-bottom: $sp-lg;
+
+        .c1-main {
+            background: $c1-main;
+        }
+    }
+}
+
+.container__inner {
+    overflow: hidden;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+
+    @include base-only {
+        width: $width-xs;
+        min-width: $width-min-xs;
+        max-width: $width-max-xs;
+    }
+    @include small-only {
+        width: $width-sm;
+        min-width: $width-min-sm;
+        max-width: $width-max-sm;
+    }
+    @include medium-only {
+        width: $width-md;
+        min-width: $width-min-md;
+        max-width: $width-max-md;
+    }
+    @include large {
+        width: $width-lg;
+        min-width: $width-min-lg;
+        max-width: $width-max-lg;
+    }
+    @include xlarge {
+        width: $width-xl;
+        min-width: $width-min-xl;
+        max-width: $width-max-xl;
+    }
+
+    &--narrow {
+        @include base-only {
+            width: $width-xs / 1.5;
+            min-width: $width-min-xs / 1.5;
+            max-width: $width-max-xs / 1.5;
+        }
+        @include small-only {
+            width: $width-sm / 1.5;
+            min-width: $width-min-sm / 1.5;
+            max-width: $width-max-sm / 1.5;
+        }
+        @include medium-only {
+            width: $width-md / 1.5;
+            min-width: $width-min-md / 1.5;
+            max-width: $width-max-md / 1.5;
+        }
+        @include large {
+            width: $width-lg / 1.5;
+            min-width: $width-min-lg / 1.5;
+            max-width: $width-max-lg / 1.5;
+        }
+        @include xlarge {
+            width: $width-xl / 1.5;
+            min-width: $width-min-xl / 1.5;
+            max-width: $width-max-xl / 1.5;
+        }
+    }
+
+    &--wide {
+        @include base-only {
+            width: $width-xs * 1.5;
+            min-width: $width-min-xs * 1.5;
+            max-width: $width-max-xs * 1.5;
+        }
+        @include small-only {
+            width: $width-sm * 1.5;
+            min-width: $width-min-sm * 1.5;
+            max-width: $width-max-sm * 1.5;
+        }
+        @include medium-only {
+            width: $width-md * 1.5;
+            min-width: $width-min-md * 1.5;
+            max-width: $width-max-md * 1.5;
+        }
+        @include large {
+            width: $width-lg * 1.5;
+            min-width: $width-min-lg * 1.5;
+            max-width: $width-max-lg * 1.5;
+        }
+        @include xlarge {
+            width: $width-xl * 1.5;
+            min-width: $width-min-xl * 1.5;
+            max-width: $width-max-xl * 1.5;
+        }
+    }
+}

@@ -1,0 +1,23 @@
+
+a {
+    transition: color 0.15 ease-in-out;
+	font-family: $font-2;
+    color: $c3-third;
+    text-decoration: none;
+
+    &:visited {
+        color: $c3-third;
+    }
+    &:hover {
+
+        @include medium {
+            color: $c1-third;
+        }
+    }
+	&:focus {
+        color: $c3-third;
+    }
+    &:active {
+        color: $c3-third;
+    }
+}

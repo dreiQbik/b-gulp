@@ -1,0 +1,130 @@
+/******************************************************************
+
+    > COLORS
+	> GRID_WIDTH
+    > BREAKPOINTS
+
+******************************************************************/
+
+
+
+/******************************************************************
+	COLORS
+******************************************************************/
+
+    //defaults
+	$c-black:  						#000000;
+	$c1-grey:   					#111111;
+	$c2-grey:   					#222222;
+	$c3-grey:   					#333333;
+	$c4-grey:   					#444444;
+	$c5-grey:   					#555555;
+	$c6-grey:   					#666666;
+	$c7-grey:   					#777777;
+	$c8-grey:   					#888888;
+	$c9-grey:   					#999999;
+	$c10-grey:   					#aaaaaa;
+	$c11-grey:   					#bbbbbb;
+	$c12-grey:   					#cccccc;
+	$c13-grey:   					#dddddd;
+	$c14-grey:   					#eeeeee;
+	$c-white:  						#ffffff;
+
+    // project
+	$c1-main:						#202A35;
+	$c2-main:						#364250;
+	$c3-main:						#F5F8FB;
+
+	$c1-second:						#fff191;
+	$c2-second:						#EEDE70;
+
+	$c1-third:						#ec764d;
+	$c2-third:						#d96a44;
+	$c3-third:						#ff855b;
+
+    // specials
+	$c1-accent: 					#ccd9e8;
+	$c1-hint:						$c1-third;
+	$c1-error:						#D6445C;
+	$c1-success:					#00b878;
+
+
+
+/******************************************************************
+	SPACES
+        between sections vertically
+******************************************************************/
+
+	$sp-xxs: 8px;
+    $sp-xs : 16px;
+    $sp-sm : 24px;
+    $sp-md : 32px;
+    $sp-lg : 48px;
+    $sp-xl : 64px;
+    $sp-xxl: 72px;
+
+
+/******************************************************************
+	GRID_GAPS
+        between columns horizontally use xgap
+        between columns vertically use ygap
+******************************************************************/
+
+	$xgap-xs: 			6px;	    // gaps between columns
+	$ygap-xs: 			12px;		// gaps between rows
+
+	$xgap-sm: 			7px;	    // gaps between columns
+	$ygap-sm: 			14px;		// gaps between rows
+
+	$xgap-md: 			8px;	    // gaps between columns
+	$ygap-md: 			16px;		// gaps between rows
+
+	$xgap-lg: 			10px;	    // gaps between columns
+	$ygap-lg: 			20px;		// gaps between rows
+
+    $xgap-xl: 			15px;	    // gaps between columns
+	$ygap-xl: 			30px;		// gaps between rows
+
+
+/******************************************************************
+	GRID_WIDTH
+******************************************************************/
+
+	$width-xs: 			100%;
+	$width-min-xs: 		0;
+	$width-max-xs: 		360px;
+
+	$width-sm: 			90%;
+	$width-min-sm: 		0;
+	$width-max-sm: 		600px;
+
+	$width-md: 			80%;
+	$width-min-md: 		0;
+	$width-max-md: 		1024;
+
+	$width-lg: 			70%;
+	$width-min-lg: 		0;
+	$width-max-lg: 		1400px;
+
+	$width-xl: 			60%;
+	$width-min-xl: 		0;
+	$width-max-xl: 		1920px;
+
+
+
+/******************************************************************
+	BREAKPOINTS
+******************************************************************/
+
+	$w-base-max: 		480px;
+
+	$w-small-min: 		481px;
+	$w-small-max: 		960px;
+
+	$w-medium-min: 		961px;
+	$w-medium-max: 		1360px;
+
+	$w-large-min: 		1361px;
+	$w-large-max: 		1920px;
+
+	$w-xlarge-min: 		1921px;
