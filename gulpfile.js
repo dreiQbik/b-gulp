@@ -100,6 +100,13 @@ gulp.task('html', function() {
         .pipe(gulp.dest('dist'));
 });
 
+// Create PHP Files
+gulp.task('php', function() {
+    return gulp
+        .src('src/*.php')
+        .pipe(gulp.dest('dist'));
+});
+
 // Minify HTML Files
 gulp.task('htmlmin', function() {
     return gulp
@@ -128,6 +135,10 @@ gulp.task('watch', function() {
     gulp.watch('src/*.html', [
         'html'
     ]).on('change', browserSync.reload);
+
+    gulp.watch('src/*.php', [
+        'php'
+    ]).on('change', browserSync.reload);
 });
 
 // Default Tasks
@@ -136,6 +147,7 @@ gulp.task('default', [
     'lint',
     'scripts',
     'html',
+    'php',
     'vendor-scripts',
     'watch'
 ]);
@@ -147,5 +159,6 @@ gulp.task('build', [
     'lint',
     'scripts',
     'vendor-scripts',
-    'htmlmin'
+    'htmlmin',
+    'php'
 ]);

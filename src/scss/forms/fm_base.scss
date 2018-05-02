@@ -1,0 +1,118 @@
+
+.form {
+    background-color: $c2-main;
+    margin: 1em auto;
+    padding: 2em 2em 3em;
+    text-align: center;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+
+    @include medium {
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    @include medium {
+        max-width: 800px;
+    }
+
+    &__heading {
+        font-family: $font-1;
+        font-weight: normal;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        margin-top: 0.5em;
+        margin-bottom: 1.2em;
+        color: $c1-second;
+
+        @include small {
+            font-size: 2rem;
+        }
+    }
+
+    &__fields {
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        margin: 0.5em auto;
+
+        &.active .contact__label,
+        &.filled .contact__label {
+            font-size: 0.7rem;
+            top: 0.2em;
+            font-weight: bold;
+            color: $c2-main;
+        }
+
+        &.active .contact__label-info,
+        &.filled .contact__label-info {
+            font-size: 0.7rem;
+        }
+    }
+
+    &__textarea {
+        min-height: 200px;
+    }
+
+    &__input {
+        background-color: $c-white;
+        padding: 0.9em 20px 0.7em;
+        border: 0;
+        border-radius: 0;
+        display: block;
+        width: 100%;
+        border-bottom: 2px solid $c3-main;
+
+        @include medium {
+            font-size: 1.1rem;
+        }
+
+        &:focus {
+            outline: none;
+            border-bottom: 2px solid $c1-third;
+        }
+    }
+
+    &__label {
+        position: absolute;
+        top: 0.8em;
+        left: 20px;
+        color: $c2-main;
+        user-select: none;
+        cursor: text;
+        transition: all 0.1s ease-out;
+
+        &-info {
+            font-size: 0.8rem;
+        }
+    }
+
+    &__text {
+        color: $c3-main;
+        font-weight: bold;
+        max-width: 500px;
+        margin: 1em auto 0;
+    }
+
+    &__close {
+        color: $c-white;
+        padding: 0.6em;
+        position: absolute;
+        right: 0;
+        top: 0;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: all 0.1s ease-out;
+
+        @include medium {
+            padding: 1em;
+        }
+
+        @include medium {
+
+            &:hover {
+                background-color: $c1-second;
+                color: $c2-main;
+            }
+        }
+    }
+}
